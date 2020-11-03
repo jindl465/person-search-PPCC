@@ -19,8 +19,11 @@ from utils import get_topk, get_mAP, affmat2retdict, affmat2retlist
 
 
 def run_in_movie(data_dir, subset, data_type, face_ratio):
-    affinity_dir = osp.join(data_dir, 'affinity', subset, 'in')
-    list_file = osp.join(data_dir, 'meta', subset+'.json')
+    # affinity_dir = os.join(data_dir, 'affinity', subset, 'in')
+    # list_file = osp.join(data_dir, 'meta', subset+'.json')
+    affinity_dir = data_dir
+    list_file = subset
+
     mid_list, meta_info = read_meta(list_file)
 
     average_mAP = 0
